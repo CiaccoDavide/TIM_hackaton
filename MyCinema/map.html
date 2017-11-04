@@ -6,20 +6,21 @@
 
 </head>
 <body>
-	<div id="map"></div>
+	<div id="googleMap">map</div>f
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script-->
-	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	
 	<script type="text/javascript">
-
-		    var mapOptions = {
+		function initMap() {
+			 var mapOptions = {
 		        center: new google.maps.LatLng(51.5, -0.12),
 		        zoom: 10,
 		        mapTypeId: google.maps.MapTypeId.HYBRID
 		    }
-		var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-		
+		var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+		}   
 	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoZysoM6w3GaVJ5L1-0FIv_JR4Zwdp7Fo&callback=initMap"></script>
 </body>
 </html>
