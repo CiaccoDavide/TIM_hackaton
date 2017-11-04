@@ -3,7 +3,7 @@
 <head>
 	<title></title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 <body>
 	<div id="search_bar" class="text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -28,27 +28,39 @@
 	
 	<script type="text/javascript">
 
-$.ajax({
+/*$.ajax({
     url: 'http://pp.api.helab.nuvolaitaliana.it/location/v1/333768854',
     headers:{'KeyId':'70066b05-662b-4e89-bbdc-51ed53e645eb'},
     complete: function(data,result) {
         alert("Data: " + data + "\nStatus: " + status);
     }
-});
+});*/
 
+				var latitudine;
+				var longitudine;
 
 		function initMap() {
-			$.get("http://pp.api.helab.nuvolaitaliana.it/location/v1/?KeyId=70066b05-662b-4e89-bbdc-51ed53e645eb", function(data, status){
-	      		alert("Data: " + data + "\nStatus: " + status);
-			    /*
-				 var mapOptions = {
-			        center: new google.maps.LatLng(51.5, -0.12),
-			        zoom: 10,
+			$.ajax({type:"GET",
+
+			    url: 'https://pp.api.helab.nuvolaitaliana.it/location/v1/3337335904',
+			    headers:{'KeyId':'70066b05-662b-4e89-bbdc-51ed53e645eb'},
+         		success : function(text)
+         {
+             latitudine=text.result.values.latitudine;
+             longitudine=text.result.values.longitudine;
+
+              var mapOptions = {
+			        center: new google.maps.LatLng(latitudine, longitudine),
+			        zoom: 15,
 			        mapTypeId: google.maps.MapTypeId.HYBRID
 			    
 			    }
-			var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions); */
+			var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions); 
+			 
+         }
 			});
+			    
+				
 		}   
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoZysoM6w3GaVJ5L1-0FIv_JR4Zwdp7Fo&callback=initMap"></script>
