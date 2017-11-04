@@ -12,8 +12,8 @@
 		<button type="button" class="form-control btn btn-default btn-sm col-xs-3 col-sm-2 col-md-2 col-lg-1">Filters</button>
 	</div>
 
-	<div id="movies" class="contents">
-		<div id="googleMap" style="width:400px;height:400px;">map</div>
+	<div class="map-container">
+		<div id="googleMap">map</div>
 
 	</div>
 
@@ -36,9 +36,8 @@
     }
 });*/
 
-				var latitudine;
-				var longitudine;
-
+		var latitudine;
+		var longitudine;
 		function initMap() {
 			$.ajax({type:"GET",
 
@@ -59,8 +58,6 @@
 			 
          }
 			});
-			    
-				
 		}   
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoZysoM6w3GaVJ5L1-0FIv_JR4Zwdp7Fo&callback=initMap"></script>
