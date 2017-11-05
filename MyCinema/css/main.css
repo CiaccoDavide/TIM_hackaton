@@ -48,6 +48,9 @@ a,a:hover{text-decoration: none;}
 	float: left;
 	width: 33%!important;
 }
+.spacer10{height: 10px;}
+.spacer20{height: 20px;}
+#cinemas,
 #movies{
 	position: fixed;
 	top: 120px;
@@ -154,7 +157,7 @@ a,a:hover{text-decoration: none;}
 	margin-top: 20px;
 	height: 40px;
 }
-
+.prenota-btn,
 .login-btn {
   background: #3498db;
   background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
@@ -168,7 +171,7 @@ a,a:hover{text-decoration: none;}
   color: #ffffff;
   text-decoration: none;
 }
-
+.prenota-btn:hover,
 .login-btn:hover {
   background: #3cb0fd;
   background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
@@ -181,7 +184,7 @@ a,a:hover{text-decoration: none;}
 
 .trailer iframe{
 	width: 100%;
-	height: auto;
+	height: 200px;
 }
 
 #movie{
@@ -194,4 +197,52 @@ a,a:hover{text-decoration: none;}
 }
 
 .slot h2{font-size: 40px;font-weight: 900;padding: 20px;}
-.slot button{height: 60px; margin-top: 20px; margin-bottom: 80px;}
+.slot button{height: 60px; margin-top: 20px; margin-bottom: 60px;}
+
+.preferenza{
+	padding-top:20px; 
+	margin: 0;
+	width: 33.3333%;
+	float: left;
+}
+.preferenza:hover{cursor: pointer;}
+.preferenza img{width: 60%; opacity: 0.4;}
+.preferenza.selected img{opacity: 1.0;}
+.preferenza p{padding: 10px;}
+
+.pref-title{padding-top: 20px;}
+.prefs{
+	position: fixed;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: auto;
+}
+#imposta_prefs{
+	float: left;
+	height: 60px;
+	margin-bottom: 30px;
+}
+
+.espansore{
+	color:#fff;
+	background: #69d;
+	line-height: 0;
+	border-radius: 4px;
+	font-size: 30px;
+	display: inline-block;
+	position: relative;
+	width: 40px;
+	padding: 10px;
+	margin-bottom: -5px;
+
+}
+.espansore p{
+	position: absolute;
+	top:3px;
+}
+
+.desc{
+	padding-bottom: 40px;
+}
