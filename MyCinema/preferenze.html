@@ -8,78 +8,96 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
-	<div class="col-md-4 preferenza">
-			<img src="./img/001-knife.png" >
-		<div class="testo">
-			<p>Thriller</p>
+	<div class="text-center col-md-12 prefs">
+		<div class="col-md-12 pref-title">
+			<h2>Scegli i tuoi generi preferiti.</h2>
+			<p>Seleziona i generi che ti piacciono per suggerirti i film perfetti per te.</p>
 		</div>
-	</div>	
-	<div class="col-md-4 preferenza">
-			<img src="./img/007-hockey-mask.png" >
-		<div class="testo">
-			<p>Horror</p>
+		<div class="preferenza">
+				<img src="./img/001-knife.png" >
+			<div class="testo">
+				<p>Thriller</p>
+			</div>
+		</div>	
+		<div class="preferenza">
+				<img src="./img/007-hockey-mask.png" >
+			<div class="testo">
+				<p>Horror</p>
+			</div>
+		</div>
+		<div class="preferenza">
+				<img src="./img/005-travel.png" >
+			<div class="testo">
+				<p>Travel</p>
+			</div>
+		</div>
+		<div class="preferenza">
+				<img src="./img/002-duck.png" >
+			<div class="testo">
+				<p>Animazione</p>
+			</div>
+		</div>
+		<div class="preferenza">
+				<img src="./img/003-location.png" >
+			<div class="testo">
+				<p>Avventura</p>
+			</div>
+		</div>
+		<div class="preferenza">
+				<img src="./img/004-magic-wand.png" >
+			<div class="testo">
+				<p>Fantasy</p>
+			</div>
+		</div>
+		<div class="preferenza">
+				<img src="./img/006-like.png" >
+			<div class="testo">
+				<p>Romantico</p>
+			</div>
+		</div>
+		<div class="preferenza">
+				<img src="./img/008-gun.png" >
+			<div class="testo">
+				<p>Azione</p>
+			</div>
+		</div>
+		<div class="preferenza">
+				<img src="./img/009-helmet.png" >
+			<div class="testo">
+				<p>Storico</p>
+			</div>
+		</div>
+		<div class="preferenza">
+				<img src="./img/010-tank.png" >
+			<div class="testo">
+				<p>Guerra</p>
+			</div>
+		</div>
+		<div class="preferenza">
+				<img src="./img/011-ufo.png" >
+			<div class="testo">
+				<p>Sci-Fi</p>
+			</div>
+		</div>
+		<div class="preferenza">
+				<img src="./img/012-charlie-chaplin.png" >
+			<div class="testo">
+				<p>Commedia</p>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<button class="login-btn col-sm-12 col-md-6 col-lg-3" id="imposta_prefs">Mi piacciono questi generi</button>
 		</div>
 	</div>
-	<div class="col-md-4 preferenza">
-			<img src="./img/005-travel.png" >
-		<div class="testo">
-			<p>Travel</p>
-		</div>
-	</div>
-	<div class="col-md-4 preferenza">
-			<img src="./img/002-duck.png" >
-		<div class="testo">
-			<p>Animazione</p>
-		</div>
-	</div>
-	<div class="col-md-4 preferenza">
-			<img src="./img/003-location.png" >
-		<div class="testo">
-			<p>Avventura</p>
-		</div>
-	</div>
-	<div class="col-md-4 preferenza">
-			<img src="./img/004-magic-wand.png" >
-		<div class="testo">
-			<p>Fantasy</p>
-		</div>
-	</div>
-	<div class="col-md-4 preferenza">
-			<img src="./img/006-like.png" >
-		<div class="testo">
-			<p>Romantico</p>
-		</div>
-	</div>
-	<div class="col-md-4 preferenza">
-			<img src="./img/008-gun.png" >
-		<div class="testo">
-			<p>Azione</p>
-		</div>
-	</div>
-	<div class="col-md-4 preferenza">
-			<img src="./img/009-helmet.png" >
-		<div class="testo">
-			<p>Storico</p>
-		</div>
-	</div>
-	<div class="col-md-4 preferenza">
-			<img src="./img/010-tank.png" >
-		<div class="testo">
-			<p>Guerra</p>
-		</div>
-	</div>
-	<div class="col-md-4 preferenza">
-			<img src="./img/011-ufo.png" >
-		<div class="testo">
-			<p>Sci-Fi</p>
-		</div>
-	</div>
-	<div class="col-md-4 preferenza">
-			<img src="./img/012-charlie-chaplin.png" >
-		<div class="testo">
-			<p>Commedia</p>
-		</div>
-	</div>
+
 	<script src="./js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$('.preferenza').click(function(){
+			$(this).toggleClass('selected');
+		});
+		$('#imposta_prefs').click(function(){
+			window.location.href = "./movies.html";
+		});
+	</script>
 </body>
 </html>
