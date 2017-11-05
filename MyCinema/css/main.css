@@ -48,6 +48,9 @@ a,a:hover{text-decoration: none;}
 	float: left;
 	width: 33%!important;
 }
+.spacer10{height: 10px;}
+.spacer20{height: 20px;}
+#cinemas,
 #movies{
 	position: fixed;
 	top: 120px;
@@ -154,7 +157,7 @@ a,a:hover{text-decoration: none;}
 	margin-top: 20px;
 	height: 40px;
 }
-
+.prenota-btn,
 .login-btn {
   background: #3498db;
   background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
@@ -168,7 +171,7 @@ a,a:hover{text-decoration: none;}
   color: #ffffff;
   text-decoration: none;
 }
-
+.prenota-btn:hover,
 .login-btn:hover {
   background: #3cb0fd;
   background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);

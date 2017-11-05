@@ -27,7 +27,7 @@
 					</div>
 				</div>
 				<div class="trailer"><iframe src="https://www.youtube.com/embed/w7Zv5nPLDqw" frameborder="0" gesture="media" allowfullscreen></iframe></div>
-				<div class="col-md-12"><button class="login-btn col-sm-12 col-md-6 col-lg-3" id="preno000">Prenota</button></div>
+				<div class="col-md-12"><button class="prenota-btn col-sm-12 col-md-6 col-lg-3" id="preno000">Prenota</button></div>
 			</div>
 			<div class="slot" id="slot001">
 				<div id="m001"></div>
@@ -38,7 +38,7 @@
 					</div>
 				</div>
 				<div class="trailer"><iframe src="https://www.youtube.com/embed/D7UpZmPmwSo" frameborder="0" gesture="media" allowfullscreen></iframe></div>
-				<div class="col-md-12"><button class="login-btn col-sm-12 col-md-6 col-lg-3" id="preno001">Prenota</button></div>
+				<div class="col-md-12"><button class="prenota-btn col-sm-12 col-md-6 col-lg-3" id="preno001">Prenota</button></div>
 			</div>
 			<div class="slot" id="slot002">
 				<div id="m002"></div>
@@ -49,7 +49,7 @@
 					</div>
 				</div>
 				<div class="trailer"><iframe src="https://www.youtube.com/embed/h5eJIEyIXvw" frameborder="0" gesture="media" allowfullscreen></iframe></div>
-				<div class="col-md-12"><button class="login-btn col-sm-12 col-md-6 col-lg-3" id="preno002">Prenota</button></div>
+				<div class="col-md-12"><button class="prenota-btn col-sm-12 col-md-6 col-lg-3" id="preno002">Prenota</button></div>
 			</div>
 			<div class="slot" id="slot003">
 				<div id="m003"></div>
@@ -60,7 +60,7 @@
 					</div>
 				</div>
 				<div class="trailer"><iframe src="https://www.youtube.com/embed/n9Pr5kWJ0ms" frameborder="0" gesture="media" allowfullscreen></iframe></div>
-				<div class="col-md-12"><button class="login-btn col-sm-12 col-md-6 col-lg-3" id="preno003">Prenota</button></div>
+				<div class="col-md-12"><button class="prenota-btn col-sm-12 col-md-6 col-lg-3" id="preno003">Prenota</button></div>
 			</div>
 			<div class="slot" id="slot004">
 				<div id="m004"></div>
@@ -71,7 +71,7 @@
 					</div>
 				</div>
 				<div class="trailer"><iframe src="https://www.youtube.com/embed/wIf1Lnp02c8" frameborder="0" gesture="media" allowfullscreen></iframe></div>
-				<div class="col-md-12"><button class="login-btn col-sm-12 col-md-6 col-lg-3" id="preno004">Prenota</button></div>
+				<div class="col-md-12"><button class="prenota-btn col-sm-12 col-md-6 col-lg-3" id="preno004">Prenota</button></div>
 			</div>
 			<div class="slot" id="slot005">
 				<div id="m005"></div>
@@ -82,7 +82,7 @@
 					</div>
 				</div>
 				<div class="trailer"><iframe src="https://www.youtube.com/embed/p35JDJLa9ec" frameborder="0" gesture="media" allowfullscreen></iframe></div>
-				<div class="col-md-12"><button class="login-btn col-sm-12 col-md-6 col-lg-3" id="preno005">Prenota</button></div>
+				<div class="col-md-12"><button class="prenota-btn col-sm-12 col-md-6 col-lg-3" id="preno005">Prenota</button></div>
 			</div>
 			<div class="slot" id="slot006">
 				<div id="m006"></div>
@@ -92,8 +92,13 @@
 						Philadelphia, 1975. Rocky Balboa è un bullo di periferia, quasi trentenne, con sangue italiano nelle vene. Con pochi amici e una vita scombinata in uno squallido buco metropolitano per emarginati, Rocky racimola qualche soldo come scagnozzo esattore di uno strozzino e gareggiando in alcuni incontri di pugilato per dilettanti. I pugni sono tutto quel <div class="espansore"><p>...</p></div>
 					</div>
 				</div>
-				<div class="trailer"><iframe src="https://www.youtube.com/embed/0AE6TnTQkvU" frameborder="0" gesture="media" allowfullscreen></iframe></div>
-				<div class="col-md-12"><button class="login-btn col-sm-12 col-md-6 col-lg-3" id="preno006">Prenota</button></div>
+				<div class="trailer">
+					<iframe src="https://www.youtube.com/embed/0AE6TnTQkvU" frameborder="0" gesture="media" allowfullscreen></iframe>
+				</div>
+
+				<div class="col-md-12">
+					<button class="prenota-btn col-sm-12 col-md-6 col-lg-3" id="preno006">Prenota</button>
+				</div>
 			</div>
 	</div>
 
@@ -115,6 +120,9 @@
 			$('#slot00'+i).hide();
 		}
 		$('#slot00'+location.hash.substr(1)).show();
+		$('.prenota-btn').click(function(){
+			window.location.href = "./cinema.html";
+		});
 	</script>
 </body>
 </html>
