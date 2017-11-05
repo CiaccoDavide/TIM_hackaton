@@ -10,14 +10,59 @@
 <body>
 	<div class="text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<h1>MyCinema for now</h1>
-		<form id="loginForm" action="./map.html">
-			<input type="text" name="username" class="col-sm-12 col-md-6 col-lg-3" placeholder="Username"><br/>
-			<input type="password" name="username" class="col-sm-12 col-md-6 col-lg-3" 	placeholder="Password"><br>
-			<input type="submit" value="Login" class="col-sm-12 col-md-6 col-lg-3">
-		</form>
+		<div id="otp_request">
+			<input type="text" name="username" class="col-sm-12 col-md-6 col-lg-3" placeholder="Num Telefono"><br/>
+			<button class="col-sm-12 col-md-6 col-lg-3">Request OTP</button>
+		</div>
+		<div id="otp_confirm">
+			<input type="password" name="password" class="hidden col-sm-12 col-md-6 col-lg-3" placeholder="OTPassword"><br>
+			<button class="col-sm-12 col-md-6 col-lg-3">Verify OTP</button>
+		</div>
+		<div id="login_status" class="text-center col-sm-12 col-md-6 col-lg-3"></div>
 
 	</div>
 
 	<script src="./js/jquery.min.js"></script>
+	<script type="text/javascript">
+		var logged = false;
+		$('#otp_confirm').hide();
+		$('#otp_request button').click(function() {
+			$.ajax({
+				type:"POST",
+				url: 'https://pp.api.helab.nuvolaitaliana.it/otp/v1/' + $('#otp_request input').val(),
+				headers:{'KeyId':'70066b05-662b-4e89-bbdc-51ed53e645eb'},
+				success : function(text) {
+					if(text.result.status == "OK"){
+						$('#login_status').html('<span class="success">'+text.result.description+'</span>');
+						$('#otp_request').hide();
+						$('#otp_confirm').show();
+					}else{
+						$('#login_status').html('<span class="error">'+text.result.description+'</span>');
+					}
+				},
+				error : function(textStatus, errorz) {
+					$('#login_status').html('<span class="error">'+textStatus.statusText+': '+errorz+'<br>'+textStatus.responseText+'</span>');
+				}
+			});
+		});
+		$('#otp_confirm button').click(function() {
+			$.ajax({
+				type:"GET",
+				url: 'https://pp.api.helab.nuvolaitaliana.it/location/v1/'+ $('#otp_request input').val() +'/' + $('#otp_confirm input').val(),
+				headers:{'KeyId':'70066b05-662b-4e89-bbdc-51ed53e645eb'},
+				success : function(text) {
+					if(text.result.status == "OK"){
+						$('#login_status').html('<span class="success">'+text.result.description+'</span>');
+						window.location.href = "./preferenze.html";
+					}else{
+						$('#login_status').html('<span class="error">'+text.result.description+'</span>');
+					}
+				},
+				error : function(textStatus, errorz) {
+					$('#login_status').html('<span class="error">'+textStatus.statusText+': '+errorz+'<br>'+textStatus.responseText+'</span>');
+				}
+			});
+		});
+	</script>
 </body>
 </html>

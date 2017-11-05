@@ -107,3 +107,6 @@ a,a:hover{text-decoration: none;}
 	top:50%;
 	margin-left: -100px;
 }
+#login_status{padding: 15px;}
+.success{color: #36d;}
+.error{color: #d66;}
