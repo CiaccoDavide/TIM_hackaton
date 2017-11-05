@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<link href="./css/font.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<style type="text/css">
+		#m000{background-image: url('./img/m000.jpg');background-position: 50% 60%; height:200px; background-size: cover;}
+		#m001{background-image: url('./img/m001.jpg');background-position: 50% 0%; height:200px; background-size: cover;}
+		#m002{background-image: url('./img/m002.jpg');background-position: 50% 0%; height:200px; background-size: cover;}
+		#m003{background-image: url('./img/m003.jpg');background-position: 50% 0%; height:200px; background-size: cover;}
+		#m004{background-image: url('./img/m004.jpg');background-position: 50% 18%; height:200px; background-size: cover;}
+		#m005{background-image: url('./img/m005.jpg');background-position: 50% 5%; height:200px; background-size: cover;}
+		#m006{background-image: url('./img/m006.jpg');background-position: 50% 16%; height:200px; background-size: cover;}
+	</style>
+</head>
+<body>
+	<div id="movie" class="">
+			<div class="slot" id="slot000">
+				<div id="m000"></div>
+				<h2>IT</h2>
+				<div class="col-md-12"><div class="desc col-md-12"></div></div>
+				<div class="trailer"><iframe src="https://www.youtube.com/embed/w7Zv5nPLDqw" frameborder="0" gesture="media" allowfullscreen></iframe></div>
+				<div class="col-md-12"><button class="login-btn col-sm-12 col-md-6 col-lg-3" id="preno000">Prenota</button></div>
+			</div>
+			<div class="slot" id="slot001">
+				<div id="m001"></div>
+				<h2>Thor: Ragnarok</h2>
+				<div class="col-md-12"><div class="desc col-md-12"></div></div>
+				<div class="trailer"><iframe src="https://www.youtube.com/embed/D7UpZmPmwSo" frameborder="0" gesture="media" allowfullscreen></iframe></div>
+				<div class="col-md-12"><button class="login-btn col-sm-12 col-md-6 col-lg-3" id="preno001">Prenota</button></div>
+			</div>
+			<div class="slot" id="slot002">
+				<div id="m002"></div>
+				<h2>Vittoria e Abdul</h2>
+				<div class="col-md-12"><div class="desc col-md-12"></div></div>
+				<div class="trailer"><iframe src="https://www.youtube.com/embed/h5eJIEyIXvw" frameborder="0" gesture="media" allowfullscreen></iframe></div>
+				<div class="col-md-12"><button class="login-btn col-sm-12 col-md-6 col-lg-3" id="preno002">Prenota</button></div>
+			</div>
+			<div class="slot" id="slot003">
+				<div id="m003"></div>
+				<h2>Capitan Mutanda</h2>
+				<div class="col-md-12"><div class="desc col-md-12"></div></div>
+				<div class="trailer"><iframe src="https://www.youtube.com/embed/n9Pr5kWJ0ms" frameborder="0" gesture="media" allowfullscreen></iframe></div>
+				<div class="col-md-12"><button class="login-btn col-sm-12 col-md-6 col-lg-3" id="preno003">Prenota</button></div>
+			</div>
+			<div class="slot" id="slot004">
+				<div id="m004"></div>
+				<h2>The Shining</h2>
+				<div class="col-md-12"><div class="desc col-md-12"></div></div>
+				<div class="trailer"><iframe src="https://www.youtube.com/embed/wIf1Lnp02c8" frameborder="0" gesture="media" allowfullscreen></iframe></div>
+				<div class="col-md-12"><button class="login-btn col-sm-12 col-md-6 col-lg-3" id="preno004">Prenota</button></div>
+			</div>
+			<div class="slot" id="slot005">
+				<div id="m005"></div>
+				<h2>The Thing</h2>
+				<div class="col-md-12"><div class="desc col-md-12"></div></div>
+				<div class="trailer"><iframe src="https://www.youtube.com/embed/p35JDJLa9ec" frameborder="0" gesture="media" allowfullscreen></iframe></div>
+				<div class="col-md-12"><button class="login-btn col-sm-12 col-md-6 col-lg-3" id="preno005">Prenota</button></div>
+			</div>
+			<div class="slot" id="slot006">
+				<div id="m006"></div>
+				<h2>Rocky</h2>
+				<div class="col-md-12"><div class="desc col-md-12"></div></div>
+				<div class="trailer"><iframe src="https://www.youtube.com/embed/0AE6TnTQkvU" frameborder="0" gesture="media" allowfullscreen></iframe></div>
+				<div class="col-md-12"><button class="login-btn col-sm-12 col-md-6 col-lg-3" id="preno006">Prenota</button></div>
+			</div>
+	</div>
+
+	<div id="footer" class="text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<form action="./movies.html">
+		<button type="submit" class="form-control btn btn-default btn-sm col-md-4 menu-link">Movies</button>
+		</form>
+		<form action="./map.html">
+		<button type="submit" class="form-control btn btn-default btn-sm col-md-4 menu-link">Mappa</button>
+		</form>
+		<form action="./settings.html">
+		<button type="submit" class="form-control btn btn-default btn-sm col-md-4 menu-link">Profile</button>
+		</form>
+	</div>
+
+	<script src="./js/jquery.min.js"></script>
+	<script type="text/javascript">
+		for(i=0;i<7;i++){
+			$('#slot00'+i).hide();
+		}
+		$('#slot00'+location.hash.substr(1)).show();
+	</script>
+</body>
+</html>

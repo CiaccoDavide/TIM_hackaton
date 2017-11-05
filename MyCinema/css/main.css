@@ -178,3 +178,20 @@ a,a:hover{text-decoration: none;}
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
+
+.trailer iframe{
+	width: 100%;
+	height: auto;
+}
+
+#movie{
+	position: fixed;
+	top: 0px;
+	bottom: 50px;
+	width: 100%;
+	margin: 0;
+	overflow: auto;
+}
+
+.slot h2{font-size: 40px;font-weight: 900;padding: 20px;}
+.slot button{height: 60px; margin-top: 20px; margin-bottom: 80px;}
