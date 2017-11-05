@@ -39,13 +39,18 @@
 				success : function(text) {
 					latitudine=text.result.values.latitudine;
 					longitudine=text.result.values.longitudine;
-
+					var pos={lat: parseFloat(latitudine), lng: parseFloat(longitudine)};
+					console.log(pos);
 					var mapOptions = {
 						center: new google.maps.LatLng(latitudine, longitudine),
 						zoom: 15,
 						mapTypeId: google.maps.MapTypeId.HYBRID
 					}
 					var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions); 
+					var marker = new google.maps.Marker({
+          				position: pos,
+         				map: map
+       				});
 				}
 			});
 		}   
